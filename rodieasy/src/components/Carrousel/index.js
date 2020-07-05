@@ -13,7 +13,7 @@ function SampleFowardArrow(props) {
   return <ArrowForward onClick={onClick} className={className} />;
 }
 
-export default function Carrousel() {
+export default function Carrousel({ data }) {
   const carrouselSettings = {
     dots: true,
     infinite: true,
@@ -26,6 +26,10 @@ export default function Carrousel() {
     <>
       <SlickWrapper>
         <Slider {...carrouselSettings}>
+          {data &&
+            data.map(({ name, urlImage, id }) => (
+              <ProductCard title={name} imageUrl={urlImage} id={id} key={id} />
+            ))}
           <ProductCard
             title="4 queijos"
             imageUrl="https://www.receiteria.com.br/wp-content/uploads/receitas-de-pizza-quatro-queijos-1.jpg"

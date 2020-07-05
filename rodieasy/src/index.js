@@ -4,11 +4,18 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import { Theme } from './config/themes';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import WebFont from 'webfontloader';
+
+WebFont.load({
+  google: {
+    families: ['Montserrat', 'sans-serif'],
+  },
+});
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={Theme}>
-    <App />
+      <App />
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')

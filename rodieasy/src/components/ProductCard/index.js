@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledCard, StyledCardContent } from './styles';
+import { StyledCard, StyledCardContent, TextCard } from './styles';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -14,13 +14,11 @@ export default function ProductCard({ title, imageUrl, id }) {
           <img
             src={imageUrl}
             alt={title}
-            style={{ objectFit: 'cover', width: '100%' }}
+            style={{ objectFit: 'cover', width: '100%', height: '100px' }}
           />
         </CardMedia>
         <StyledCardContent>
-          <Typography variant="button" display="block">
-            {title}
-          </Typography>
+          <TextCard>{title}</TextCard>
         </StyledCardContent>
       </CardActionArea>
     </StyledCard>

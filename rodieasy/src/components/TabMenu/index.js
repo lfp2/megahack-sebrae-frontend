@@ -3,9 +3,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import { pizzaMenu, bebidasMenu } from '../../config/menuItems';
 
-export default function TabMenu({ type }) {
+export default function TabMenu({ type, value, setValue }) {
   const tabsString = type === 'Pizza' ? pizzaMenu : bebidasMenu;
-  const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

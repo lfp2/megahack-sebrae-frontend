@@ -11,3 +11,10 @@ export const StyledCardContent = styled(CardContent)`
   max-width: 150px;
   height: 50px;
 `;
+
+export const TextCard = styled.text`
+  font-size: 14px;
+  font-family: Montserrat, sans-serif;
+  color: #585858;
+  font-weight: 600;
+`;
