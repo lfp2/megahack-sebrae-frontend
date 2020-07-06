@@ -5,11 +5,6 @@
   <p>
 Esta aplicação PWA foi desenvolvida durante o <a href="http://megahack.com.br/"><span>MegaHack</span></a> para o desafio SEBRAE cujo objetivo era a criação de soluções para reconsquistar o consumidor de serviços de alimentação pós/durante a pandemia.
 </p>
-
-  <div>
-    <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/anajuliabit/megahack-sebrae-backend?color=%233a86ff">
-    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/anajuliabit/megahack-sebrae-backend?color=233a86ff">
-  </div>
 </div>
 
 ## :computer: Tecnologias
