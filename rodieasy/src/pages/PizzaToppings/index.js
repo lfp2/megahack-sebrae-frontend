@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { BoxLoading } from 'react-loadingg';
 import gql from 'graphql-tag';
 
-export default function PizzaToppings() {
+export default function PizzaToppings({ setShowNavBar }) {
   const [value, setValue] = useState(0);
 
   const { loading, error, data } = useQuery(gql`
@@ -21,6 +21,8 @@ export default function PizzaToppings() {
 
   if (loading) return <BoxLoading color="#ff7d64" />;
   if (error) return <p>Error :(</p>;
+
+  setShowNavBar(true);
 
   return (
     <div className="PizzaToppings">

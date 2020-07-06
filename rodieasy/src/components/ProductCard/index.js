@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyledCard, StyledCardContent, TextCard } from './styles';
 import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import { Link, useRouteMatch } from 'react-router-dom';
 

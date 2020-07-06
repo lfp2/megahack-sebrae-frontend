@@ -12,7 +12,7 @@ import { useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 import { BoxLoading } from 'react-loadingg';
 
-export default function PizzaDetails() {
+export default function PizzaDetails({ setShowNavBar }) {
   const { pizzaId } = useParams();
 
   const { loading, error, data } = useQuery(gql`
@@ -25,8 +25,13 @@ export default function PizzaDetails() {
     }
   `);
 
-  if (loading) return <BoxLoading color="#ff7d64" />;
+  if (loading) {
+    setShowNavBar(false);
+    return <BoxLoading color="#ff7d64" />;
+  }
   if (error) return <p>Error :(</p>;
+
+  setShowNavBar(true);
 
   return (
     <>
