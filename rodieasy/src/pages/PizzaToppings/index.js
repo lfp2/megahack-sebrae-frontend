@@ -4,6 +4,7 @@ import TabMenu from '../../components/TabMenu';
 import { useQuery } from '@apollo/react-hooks';
 import { BoxLoading } from 'react-loadingg';
 import gql from 'graphql-tag';
+import { Proximas, Prontas, Forno } from './styles';
 
 export default function PizzaToppings({ setShowNavBar }) {
   const [value, setValue] = useState(0);
@@ -27,10 +28,13 @@ export default function PizzaToppings({ setShowNavBar }) {
   return (
     <div className="PizzaToppings">
       <TabMenu type="Pizza" value={value} setValue={setValue} />
+      <Prontas />
       <Carrousel data={data.pizzas.filter((item) => item.status === 'READY')} />
+      <Forno />
       <Carrousel
         data={data.pizzas.filter((item) => item.status === 'COOKING')}
       />
+      <Proximas />
       <Carrousel data={data.pizzas.filter((item) => item.status === 'NEXT')} />
     </div>
   );

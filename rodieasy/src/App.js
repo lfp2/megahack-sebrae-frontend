@@ -6,6 +6,7 @@ import PizzaDetails from './pages/PizzaDetails';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { client } from './config/apollo';
 import InitialScreen from './pages/InitialScreen';
+import Drinks from './pages/Drinks';
 
 function App() {
   const [showNavBar, setShowNavBar] = useState(false);
@@ -15,6 +16,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <InitialScreen />
+          </Route>
+          <Route exact path="/bebidas">
+            <Drinks setShowNavBar={setShowNavBar} />
           </Route>
           <Route exact path="/sabores">
             <PizzaToppings setShowNavBar={setShowNavBar} />
